@@ -1,28 +1,28 @@
-# DubThee
-Short description and motivation.
+# dub_thee
 
-## Usage
-How to use my plugin.
+Rails page titles via I18n.
+
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'dub_thee'
+gem "dub_thee"
 ```
 
 And then execute:
+
 ```bash
-$ bundle
+$ bundle install
 ```
 
-Or install it yourself as:
-```bash
-$ gem install dub_thee
-```
 
 ## Contributing
-Contribution directions go here.
+
+Run `rake test` to run the tests.
+
 
 ## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+[MIT License](https://opensource.org/licenses/MIT)
