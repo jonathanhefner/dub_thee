@@ -1,0 +1,22 @@
+<%= form_with(model: namespaced_thing, local: true) do |form| %>
+  <% if namespaced_thing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(namespaced_thing.errors.count, "error") %> prohibited this namespaced_thing from being saved:</h2>
+
+      <ul>
+      <% namespaced_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

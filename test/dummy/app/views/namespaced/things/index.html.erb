@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Namespaced Things</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @namespaced_things.each do |namespaced_thing| %>
+      <tr>
+        <td><%= namespaced_thing.color %></td>
+        <td><%= link_to 'Show', namespaced_thing %></td>
+        <td><%= link_to 'Edit', edit_namespaced_thing_path(namespaced_thing) %></td>
+        <td><%= link_to 'Destroy', namespaced_thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Namespaced Thing', new_namespaced_thing_path %>
