@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dummy</title>
+    <% @page_title = "this false conditional should not prevent I18n lookup" if false %>
+    <title><%= page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,5 +12,14 @@
 
   <body>
     <%= yield %>
+
+    <% if page_title.object_id == page_title.object_id %>
+      <p>page_title is memoized</p>
+    <% end %>
+
+    <% @page_title = "OVERRIDDEN" %>
+    <% if page_title == @page_title %>
+      <p>@page_title can be overridden</p>
+    <% end %>
   </body>
 </html>
