@@ -3,8 +3,9 @@
 Rails page titles via I18n.  For example, given the following
 application layout:
 
-```erb
+```html+erb
 <!-- app/views/layouts/application.html.erb -->
+
 <html>
   <head>
     <title><%= page_title %> | My Web Site</title>
@@ -16,7 +17,8 @@ application layout:
 And the following translations:
 
 ```yaml
-# config/locales/page_title.en.yml
+## config/locales/page_title.en.yml
+
 en:
   page_title:
     home:
@@ -41,7 +43,8 @@ is included to enable attribute interpolation.  For example, given the
 following translations:
 
 ```yaml
-# config/locales/page_title.en.yml
+## config/locales/page_title.en.yml
+
 en:
   page_title:
     products:
@@ -63,7 +66,8 @@ of the controller, and `singular` is the `String#singularize`'d form of
 `plural`.  For example, given the following translations:
 
 ```yaml
-# config/locales/page_title.en.yml
+## config/locales/page_title.en.yml
+
 en:
   page_title:
     index: "%{plural}"
@@ -85,7 +89,8 @@ return `@page_title`.  Thus, individual views can implement more nuanced
 title logic.  For example, given the following translations:
 
 ```yaml
-# config/locales/page_title.en.yml
+## config/locales/page_title.en.yml
+
 en:
   page_title:
     users:
@@ -94,9 +99,11 @@ en:
 
 And the following view:
 
-```erb
+```html+erb
 <!-- app/views/users/show.html.erb -->
+
 <% @page_title = "Your Profile" if current_user == @user %>
+
 ...
 ```
 
