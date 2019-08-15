@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "dub_thee"
   s.version     = DubThee::VERSION
   s.authors     = ["Jonathan Hefner"]
-  s.email       = ["jonathan.hefner@gmail.com"]
+  s.email       = ["jonathan@hefner.pro"]
   s.homepage    = "https://github.com/jonathanhefner/dub_thee"
   s.summary     = %q{Rails page titles via I18n}
   s.license     = "MIT"
