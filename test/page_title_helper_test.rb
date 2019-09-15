@@ -34,7 +34,9 @@ end
 
 class PageTitleHelperTest < ActionDispatch::IntegrationTest
 
-  POST_ID = Post.pluck(:id).first
+  setup do
+    @post_id = Post.pluck(:id).first
+  end
 
   def test_index_action_page_title
     assert_page_title_i18n("posts.index") do
@@ -44,7 +46,7 @@ class PageTitleHelperTest < ActionDispatch::IntegrationTest
 
   def test_show_action_page_title
     assert_page_title_i18n("posts.show") do
-      get post_path(POST_ID)
+      get post_path(@post_id)
     end
   end
 
@@ -62,19 +64,19 @@ class PageTitleHelperTest < ActionDispatch::IntegrationTest
 
   def test_edit_action_page_title
     assert_page_title_i18n("posts.edit") do
-      get edit_post_path(POST_ID)
+      get edit_post_path(@post_id)
     end
   end
 
   def test_update_action_page_title
     assert_page_title_i18n("posts.edit") do
-      put post_path(POST_ID), params: { post: { title: "" } }
+      put post_path(@post_id), params: { post: { title: "" } }
     end
   end
 
   def test_destroy_action_page_title
     assert_page_title_i18n("posts.show") do
-      delete post_path(POST_ID)
+      delete post_path(@post_id)
     end
   end
 
