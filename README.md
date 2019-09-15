@@ -1,4 +1,4 @@
-# dub_thee
+# dub_thee [![Build Status](https://travis-ci.org/jonathanhefner/dub_thee.svg?branch=master)](https://travis-ci.org/jonathanhefner/dub_thee)
 
 Rails page titles via I18n.  For example, given the following
 application layout:
