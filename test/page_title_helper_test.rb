@@ -34,8 +34,6 @@ end
 
 class PageTitleHelperTest < ActionDispatch::IntegrationTest
 
-  fixtures :posts
-
   POST_ID = Post.pluck(:id).first
 
   def test_index_action_page_title
