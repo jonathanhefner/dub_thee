@@ -17,5 +17,4 @@ Gem::Specification.new do |s|
   s.add_dependency "i18n-interpolate_nested", "~> 1.0"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "yard", "~> 0.9"
 end
