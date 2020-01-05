@@ -45,7 +45,7 @@ module DubThee::PageTitleHelper
     options[:singular] = options[:plural].singularize
     options[:default] = :"page_title.#{action_part}"
 
-    @page_title = I18n.t("page_title.#{controller_part}.#{action_part}", options)
+    @page_title = I18n.t("page_title.#{controller_part}.#{action_part}", **options)
   end
 
 end
