@@ -3,7 +3,7 @@ require "generators/dub_thee/install/install_generator"
 
 class InstallGeneratorTest < Rails::Generators::TestCase
   tests DubThee::Generators::InstallGenerator
-  destination File.join(__dir__, "tmp")
+  destination File.expand_path("../tmp", __dir__)
 
   setup do
     prepare_destination
