@@ -114,19 +114,13 @@ own profile.  Else, it will be equivalent to `"#{@user[:name]}"`.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem "dub_thee"
-```
-
-Then execute:
+Add the gem to your Gemfile:
 
 ```bash
-$ bundle install
+$ bundle add dub_thee
 ```
 
-And finally, run the install generator:
+And run the install generator:
 
 ```bash
 $ rails generate dub_thee:install
